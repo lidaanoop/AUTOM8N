@@ -2,6 +2,7 @@
 import cgitb
 import os
 import socket
+import subprocess
 
 
 # cpaneluser = os.environ["USER"]
@@ -15,6 +16,8 @@ def close_cpanel_liveapisock():
     sock.close()
 
 cgitb.enable()
+
 close_cpanel_liveapisock()
+
 print('Content-Type: text/html')
-print('<div> hello world<div>')
+print('hello world')
