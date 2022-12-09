@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 import cgitb
+import os
+import socket
+
+
+# cpaneluser = os.environ["USER"]
 cgitb.enable()
 def close_cpanel_liveapisock():
     """We close the cpanel LiveAPI socket here as we dont need those"""
