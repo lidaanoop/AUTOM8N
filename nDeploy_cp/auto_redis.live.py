@@ -20,6 +20,7 @@ cgitb.enable()
 close_cpanel_liveapisock()
 
 print('Content-Type: text/html')
+print('')
 print('<div class="container">')
 print('  <div class="row text-center">')
 print('    <div class="col-12">')
