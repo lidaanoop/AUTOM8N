@@ -5,7 +5,7 @@ import socket
 
 
 # cpaneluser = os.environ["USER"]
-cgitb.enable()
+
 def close_cpanel_liveapisock():
     """We close the cpanel LiveAPI socket here as we dont need those"""
     cp_socket = os.environ["CPANEL_CONNECT_SOCKET"]
@@ -13,6 +13,8 @@ def close_cpanel_liveapisock():
     sock.connect(cp_socket)
     sock.sendall('<cpanelxml shutdown="1" />')
     sock.close()
+
+cgitb.enable()
 close_cpanel_liveapisock()
 print('Content-Type: text/html')
-print('<div> "hello world"<div>')
+print('<div> hello world<div>')
